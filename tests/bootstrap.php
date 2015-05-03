@@ -16,4 +16,4 @@ require_once __DIR__ . '/../vendor/autoload.php';
 /**
  * Setup data directory
  */
-define('TEST_DATA_DIR', __DIR__ . '/Data');
+define('TEST_DATA_DIR', __DIR__ . '/app');
