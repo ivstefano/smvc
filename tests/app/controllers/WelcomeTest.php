@@ -1,6 +1,6 @@
 <?php
 
-class WelcomeTest extends PHPUint_Framework_TestCase{
+class WelcomeTest extends PHPUnit_Framework_TestCase{
 
 	/**
 	 * @covers controllers\Welcome::__construct
