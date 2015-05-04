@@ -2,7 +2,8 @@
 use \core\view,
 	\helpers\session,
 	\helpers\url,
-	\helpers\paginator;
+	\helpers\paginator,
+	\models\order;
 
 
 /*
@@ -14,12 +15,10 @@ class Order extends \core\controller{
 	/**
 	 * Call the parent construct
 	 */
-	public function __construct(){
+	public function __construct(Order $orderModel){
 		parent::__construct();
-		$this->_model = new \models\order();
-
-	}
-	
+		$this->_model = $orderModel;
+	}	
 	/**
 	 * Define Index page title and load template files
 	 */
