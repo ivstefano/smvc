@@ -1,3 +1,49 @@
+<h3>Exception information:</h3>
+
+		<p><strong>Date:</strong> May 04, 2015 14:15PM</p>
+
+		<p><strong>Message:</strong> SQLSTATE[42S02]: Base table or view not found: 1146 Table 'smvc.smvc_order' doesn't exist</p>
+
+		<p><strong>Code:</strong> 42S02</p>
+
+		<p><strong>File:</strong> C:\wamp\www\2015\April\interview\app\helpers\database.php</p>
+
+		<p><strong>Line:</strong> 87</p>
+
+		<h3>Stack trace:</h3>
+
+		<pre>#0 C:\wamp\www\2015\April\interview\app\helpers\database.php(87): PDOStatement->execute()
+#1 C:\wamp\www\2015\April\interview\app\models\order.php(16): helpers\Database->select('SELECT id FROM ...')
+#2 C:\wamp\www\2015\April\interview\app\controllers\order.php(34): models\Order->getTotalOrders()
+#3 C:\wamp\www\2015\April\interview\app\core\router.php(85): controllers\Order->index()
+#4 C:\wamp\www\2015\April\interview\app\core\router.php(179): core\Router::invokeObject('\\controllers\\or...')
+#5 C:\wamp\www\2015\April\interview\index.php(25): core\Router::dispatch()
+#6 {main}</pre>
+
+		<hr />
+<h3>Exception information:</h3>
+
+		<p><strong>Date:</strong> May 04, 2015 14:14PM</p>
+
+		<p><strong>Message:</strong> SQLSTATE[42S02]: Base table or view not found: 1146 Table 'smvc.smvc_order' doesn't exist</p>
+
+		<p><strong>Code:</strong> 42S02</p>
+
+		<p><strong>File:</strong> C:\wamp\www\2015\April\interview\app\helpers\database.php</p>
+
+		<p><strong>Line:</strong> 87</p>
+
+		<h3>Stack trace:</h3>
+
+		<pre>#0 C:\wamp\www\2015\April\interview\app\helpers\database.php(87): PDOStatement->execute()
+#1 C:\wamp\www\2015\April\interview\app\models\order.php(16): helpers\Database->select('SELECT id FROM ...')
+#2 C:\wamp\www\2015\April\interview\app\controllers\order.php(34): models\Order->getTotalOrders()
+#3 C:\wamp\www\2015\April\interview\app\core\router.php(85): controllers\Order->index()
+#4 C:\wamp\www\2015\April\interview\app\core\router.php(179): core\Router::invokeObject('\\controllers\\or...')
+#5 C:\wamp\www\2015\April\interview\index.php(25): core\Router::dispatch()
+#6 {main}</pre>
+
+		<hr />
 <p>Error on May 04, 2015 13:33PM - require(http://localhost/2015/April/interview/app/models/order/Product.php): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
  in C:\wamp\www\2015\April\interview\app\controllers\Order.php on line 4</p><p>Error on May 03, 2015 19:39PM - require(http://localhost/2015/April/interview/models/order/Product.php): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found
  in C:\wamp\www\2015\April\interview\app\controllers\Order.php on line 4</p><p>Error on May 03, 2015 19:36PM - require(http://localhost/2015/April/interview/models/order/Product.php): failed to open stream: HTTP request failed! HTTP/1.0 404 Not Found

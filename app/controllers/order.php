@@ -1,7 +1,9 @@
 <?php namespace controllers;
-use core\view;
+use \core\view,
+	\helpers\session,
+	\helpers\url,
+	\helpers\paginator;
 
-require(DIR.'app/models/order/Product.php');
 
 /*
  * Order controller
@@ -24,10 +26,16 @@ class Order extends \core\controller{
 	public function index() {
 		$data['title'] = 'Orders';
 		
+		
+		$pages = new paginator('10','p');
+		$pages->set_total(count($this->_model->getTotalOrders()));
+		$data['orders'] = $this->_model->getOrders($pages->get_limit());
+		$data['page_links'] = $pages->page_links();		
+
 		View::rendertemplate('header', $data);
 		View::render('order/index', $data);
 		View::rendertemplate('footer', $data);
-	}
+}
 
 
 	/**
@@ -39,10 +47,7 @@ class Order extends \core\controller{
 		View::rendertemplate('header', $data);
 		View::render('order/new', $data);
 		View::rendertemplate('footer', $data);
-
-		$this->_model->addProduct(new Product('Pizza', 10.99));
-
-		
+	
 	}
 
 }

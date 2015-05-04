@@ -3,16 +3,28 @@ namespace models;
 
 class Order extends \core\model {
 
-    
-    public function addProduct(){
+	public function getOrders($limit){
+		return $this->_db->select("SELECT 
+		".PREFIX."orders.id,
+		".PREFIX."orders.date_added,
+		".PREFIX."orders.status,
+		".PREFIX."orders.customer_id FROM ".PREFIX."orders 
+		".$limit);
+	}
+
+	public function getTotalOrders(){
+		return $this->_db->select("SELECT id FROM ".PREFIX."orders");
+	}
+
+    public function addOrderProduct(){
 
     }
 
-    public function getTotal(){
+    public function getOrderTotal(){
     	
     }
 
-    public function getProducts(){
+    public function getOrderProducts(){
     	
     }
 }

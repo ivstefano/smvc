@@ -10,9 +10,9 @@ use \core\router,
     \helpers\url;
 
 //define routes
-Router::any('', '\controllers\Welcome@index');
-Router::any('/order', '\controllers\Order@index');
-Router::any('/subpage', '\controllers\Welcome@subpage');
+Router::any('', '\controllers\welcome@index');
+Router::any('/order', '\controllers\order@index');
+Router::any('/subpage', '\controllers\welcome@subpage');
 Router::any('/order/new', '\controllers\Order@newOrder');
 
 //if no route found
