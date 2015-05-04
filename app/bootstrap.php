@@ -10,7 +10,7 @@ if(file_exists(__DIR__.'/../vendor/autoload.php')){
 }
 
 
-if (!is_readable('core/config.php')) {
+if (!is_readable(__DIR__.'/core/config.php')) {
 	die('No config.php found, configure and rename config.example.php to config.php in app/core.');
 }
 

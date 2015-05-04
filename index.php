@@ -1,10 +1,6 @@
 <?php
 
-
-
 require 'app/bootstrap.php';
-
-
 
 //initiate config
 new \core\config();
