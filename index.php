@@ -12,6 +12,8 @@ if (!is_readable('app/core/config.php')) {
 	die('No config.php found, configure and rename config.example.php to config.php in app/core.');
 }
 
+require 'app/bootstrap.php';
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -64,8 +66,10 @@ use \core\router,
     \helpers\url;
 
 //define routes
-Router::any('', '\controllers\welcome@index');
-Router::any('/subpage', '\controllers\welcome@subpage');
+Router::any('', '\controllers\Welcome@index');
+Router::any('/order', '\controllers\Order@index');
+Router::any('/subpage', '\controllers\Welcome@subpage');
+Router::any('/order/new', '\controllers\Order@newOrder');
 
 //if no route found
 Router::error('\core\error@index');
