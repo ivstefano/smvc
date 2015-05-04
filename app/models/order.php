@@ -27,5 +27,10 @@ class Order extends \core\model {
     public function getOrderProducts(){
     	
     }
+
+	public function getProducts(){ 
+		return $this->_db->select("SELECT * FROM ".PREFIX."products");
+	}
+
 }
 

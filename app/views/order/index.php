@@ -2,7 +2,7 @@
 <h1>Orders List</h1>
 <p>This page shows a list of orders</p>
 
-
+<?php print_r($data['products']);?>
 <table class="table table-striped table-hover">
     <thead>
 		<tr>
